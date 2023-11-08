@@ -1,0 +1,112 @@
+$header-background-color: inherit;
+$header-text-color: black;
+$header-padding: 16px;
+$header-font-size: 16px;
+.main-header {
+  //   border-bottom: 1px solid rgba($color: #000, $alpha: 0.2);
+  //   box-shadow: 1px 1px 3px 1px rgba($color: #000, $alpha: 0.2);
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  background-color: $header-background-color;
+  border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
+
+  @media (max-width: 420px) {
+    padding: calc($header-padding / 2);
+    text-align: center;
+  }
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    grid-area: navbar;
+    width: 100%;
+    margin: 0 auto;
+    padding: $header-padding;
+    font-size: $header-font-size;
+    @media (max-width: 512px) {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      padding: calc($header-padding/2);
+    }
+    @media (min-width: 1280px) {
+      width: 80%;
+    }
+
+    ul {
+      display: flex;
+      height: 100%;
+
+      font-size: 20px;
+      list-style: none;
+      @media (max-width: 530px) {
+        font-size: calc($header-font-size/2);
+      }
+      li {
+        align-self: flex-end;
+        margin-right: 8px;
+        padding: calc($header-padding/2);
+        transition: 0.5s;
+        cursor: pointer;
+        font-size: $header-font-size;
+
+        .anchor {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          color: $header-text-color;
+          text-decoration: none;
+
+          svg {
+            width: $header-font-size;
+            height: $header-font-size;
+            margin-right: 5px;
+            padding: 0;
+            color: $header-text-color;
+            @media (max-width: 530px) {
+              font-size: calc($header-font-size/2);
+            }
+          }
+        }
+        &:hover,
+        &:focus {
+          opacity: 0.6;
+        }
+      }
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      transition: 0.5s;
+      margin-right: 20px;
+      cursor: pointer;
+      svg {
+        object-fit: cover;
+        width: 50px;
+        height: 50px;
+        color: $header-text-color;
+        @media (max-width: 375px) {
+          width: 30px;
+          height: 30px;
+        }
+      }
+      .brand-title {
+        width: 60%;
+        font-size: calc($header-font-size * 1.5);
+        font-weight: bold;
+        color: $header-text-color;
+
+        @media (max-width: 375px) {
+          font-size: 18px;
+        }
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}

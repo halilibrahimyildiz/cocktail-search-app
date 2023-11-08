@@ -1,0 +1,21 @@
+.main-footer {
+  grid-area: footer;
+
+  color: rgba($color: #000, $alpha: 0.9);
+  text-align: end;
+  height: 20px;
+  margin-top: 40px;
+
+  .container {
+    width: 100%;
+
+    ul {
+      width: 80%;
+      text-align: center;
+
+      opacity: 1;
+      font-size: 14px;
+      list-style: none;
+    }
+  }
+}

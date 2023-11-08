@@ -1,0 +1,132 @@
+.input-container {
+  width: 90%;
+  margin: 150px auto 50px auto;
+
+  animation: fadeIn 0.8s ease-in-out forwards;
+
+  form {
+    display: flex;
+    justify-content: center;
+    border-radius: 12px;
+    width: 100%;
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.1));
+    transition: all 0.4s;
+    height: 60px;
+
+    .search-input {
+      outline: none;
+      width: 100%;
+      padding: 24px;
+      transition: 0.5s;
+      max-width: 800px;
+      font-size: 16px;
+
+      background: rgba($color: #000, $alpha: 1);
+      border: none;
+      border-radius: 12px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      font-weight: 600;
+      color: white;
+
+      @media (max-width: 512px) {
+        font-size: 16px;
+        max-width: 70%;
+      }
+      &:hover,
+      &:focus {
+        background: rgba($color: #000, $alpha: 0.8);
+      }
+    }
+    .btn {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      font-size: 16px;
+      text-align: center;
+
+      @media (max-width: 512px) {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.pagination-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 50px 0 -50px 0;
+  padding: 10px;
+
+  .alphabet {
+    .letter {
+      cursor: pointer;
+      &:hover {
+        color: rgba($color: #000, $alpha: 0.5);
+      }
+    }
+  }
+}
+
+.card-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  margin: 30px auto;
+  position: relative;
+}
+
+.card-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  height: max-content;
+  width: 90%;
+  padding: 4px;
+  min-height: 100%;
+  transition: height 0.5s;
+
+  .not-result {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    font-size: 24px;
+    animation: fadeIn 0.8s ease-in-out forwards;
+
+    p {
+      align-self: baseline;
+    }
+
+    .search-off {
+      text-align: center;
+      height: 300px;
+      width: 300px;
+    }
+  }
+
+  .loadingSpinerContainer {
+    margin-top: 250px;
+    height: 500px;
+    width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

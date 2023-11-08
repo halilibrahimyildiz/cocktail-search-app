@@ -1,0 +1,143 @@
+$color_1: #595959;
+
+$color_2: #adadad;
+
+$background-color_2: #fff;
+$curve: 40px;
+
+.card {
+  box-shadow: 3px 3px 3px 3px rgba($color: #000000, $alpha: 0.1);
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  height: 400px;
+  width: 350px;
+  margin: 8px;
+  animation: fadeIn 0.8s ease-in-out forwards;
+  cursor: pointer;
+  border-radius: calc($curve);
+  text-decoration: none;
+  &:hover {
+    .card__overlay {
+      transform: translateY(0);
+    }
+    .card__header {
+      transform: translateY(0);
+    }
+  }
+}
+
+.details {
+  outline: none;
+  position: absolute;
+  z-index: 4;
+  bottom: 30%;
+  right: 1%;
+  transform: all 0.5s;
+  width: 60px;
+  height: 60px;
+  padding: 5px;
+
+  transform: translateX(-50%);
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 15px;
+  color: $color_1;
+  transition: all 0.5s;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.card__image {
+  width: 100%;
+  height: auto;
+}
+.card__overlay {
+  position: absolute;
+  z-index: 2;
+  bottom: -2%;
+  left: 0;
+  right: 0;
+  transform: translateY(100%);
+  transition: 0.2s ease-in-out;
+  background-color: $background-color_2;
+  border-radius: calc($curve);
+  .ingredient-list {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0;
+    padding: 0 2em 2em;
+    .ingredient {
+      font-size: 14px;
+      color: $color_1;
+      span {
+        color: $color_2;
+      }
+    }
+  }
+}
+.card__header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  transform: translateY(-100%);
+  padding: 2rem;
+  transition: 0.2s ease-in-out;
+  background-color: $background-color_2;
+  border-radius: calc($curve) 0 0 0;
+}
+.card__arc {
+  position: absolute;
+  z-index: 1;
+  bottom: 99%;
+  right: 0;
+  width: 80px;
+  height: 81px;
+  path {
+    fill: $background-color_2;
+    d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+  }
+}
+.card__thumb {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.card__title {
+  margin: 0 0 0.3em;
+  font-size: 1em;
+  color: $color_1;
+}
+.card__tagline {
+  display: block;
+  margin: 1em 0;
+  font-size: 0.8em;
+  color: $color_2;
+}
+.card__status {
+  font-size: 0.8em;
+  color: $color_2;
+}
+
+.navigate {
+  .navigate_details {
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    color: $color_1;
+    p {
+      color: $color_2;
+    }
+  }
+}

@@ -1,0 +1,110 @@
+$primary-color: white;
+$secondary-color: #6c757d;
+$border-radius: 12px;
+$font-size-small: 18px;
+$font-size-medium: 22px;
+$font-size-large: 32px;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  height: 100vh;
+
+  font-family: "Roboto", sans-serif;
+
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffffff, #ece9e6); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #ece9e6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.background-div {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  //   background: rgba($primary-color, 0.2);
+
+  background-size: cover;
+  z-index: -1;
+}
+
+ul {
+  list-style: none;
+}
+
+#root {
+  position: relative;
+  display: grid;
+  grid-template-areas:
+    "navbar"
+    "main"
+    "footer";
+  grid-template-rows: auto 1fr 60px;
+  gap: 30px;
+  overflow: visible;
+  height: 100%;
+}
+
+.main-content {
+  grid-area: main;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.btn {
+  padding: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:focus,
+  &:hover,
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.btn-dark {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn-inline {
+  padding: 8px;
+  border: 1px solid rgba($primary-color, 1);
+  border-radius: $border-radius;
+}
+
+.anchor,
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

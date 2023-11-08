@@ -1,0 +1,64 @@
+.home {
+  margin-top: 120px;
+  width: 80%;
+  animation: fadeIn 0.7s ease-in-out forwards;
+
+  .home-title {
+    font-weight: 600;
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 18px;
+    height: 100%; /* Değişiklik: 40%'ten 60%'a çıkarıldı */
+
+    ul {
+      list-style: none;
+    }
+  }
+
+  .home-promotion {
+    font-size: 16px;
+    text-align: center;
+    padding: 12px;
+
+    p {
+      margin: 0 30px;
+      font-size: 16px;
+    }
+  }
+
+  .home-promotion--title {
+    font-size: 18px;
+    text-align: center;
+    padding: 12px;
+
+    p {
+      margin: 0 30px;
+    }
+  }
+
+  .navigate-button {
+    margin-top: 30px;
+    .btn {
+      background-color: #000;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 18px;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #333;
+      }
+    }
+  }
+}

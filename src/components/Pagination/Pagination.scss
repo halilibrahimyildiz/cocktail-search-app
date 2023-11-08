@@ -1,0 +1,48 @@
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 20px;
+  padding: 8px;
+
+  button {
+    width: 20px;
+    height: 20px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: transparent;
+    color: black;
+    border-color: #eee;
+    outline: none;
+    border: none;
+    opacity: 0.3;
+
+    &:active,
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .active {
+    opacity: 1;
+  }
+}
+
+#page-left {
+  font-size: 24px;
+  transform: all 0.5s ease-in;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+#page-right {
+  @extend #page-left;
+}
