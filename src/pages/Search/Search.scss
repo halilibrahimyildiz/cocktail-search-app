@@ -85,7 +85,7 @@
   position: relative;
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin-bottom: 30px;
   flex-wrap: wrap;
   height: max-content;
   width: 90%;
@@ -94,22 +94,26 @@
   transition: height 0.5s;
 
   .not-result {
-    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: black;
     font-size: 24px;
     animation: fadeIn 0.8s ease-in-out forwards;
+    padding: 8px;
 
     p {
-      align-self: baseline;
+      align-self: center;
     }
 
     .search-off {
       text-align: center;
       height: 300px;
       width: 300px;
+      @media (max-width: 568px) {
+        width: 150px;
+        height: 150px;
+      }
     }
   }
 
