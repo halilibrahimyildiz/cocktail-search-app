@@ -6,7 +6,7 @@ This project is a React application that utilizes React-Redux and Redux Toolkit 
 
 To run the project locally, follow these steps:
 
-## Demo :https://cocktail-search-app-seven.vercel.app/search
+## Demo : https://cocktail-search-app-seven.vercel.app/search
 
 ### Prerequisites
 
@@ -16,9 +16,7 @@ To run the project locally, follow these steps:
 
 1. Clone or download the project files to your computer
 2. Install the dependencies using npm:
-
    ### `npm install`
-
 3. Run:
    ### `npm start`
 4. Start the development server: The application will be accessible at `http://localhost:3000`.
