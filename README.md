@@ -2,7 +2,7 @@
 
 This project is a React application that utilizes React-Redux and Redux Toolkit to fetch and display cocktail data from [TheCocktailDB API](https://www.thecocktaildb.com/api.php). Users can search, list, and view details of cocktails.
 
-## Demo : https://cocktail-search-app-seven.vercel.app/search
+## Demo : https://cocktail-search-app-seven.vercel.app
 
 ## Getting Started
 
