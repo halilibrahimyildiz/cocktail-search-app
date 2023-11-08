@@ -104,7 +104,7 @@ function Search() {
               <div className='not-result'>
                 <MdOutlineSearchOff className='search-off' />
 
-                <p style={{fontSize: "32px", fontWeight: "600"}}>Not Result...</p>
+                <p style={{fontSize: "32px", fontWeight: "600"}}>Upss...</p>
                 <p style={{fontSize: "24px", fontWeight: "300"}}>
                   Please enter a correct cocktail name or click a letter{" "}
                 </p>

@@ -30,6 +30,9 @@
       color: white;
 
       @media (max-width: 512px) {
+        &::placeholder {
+          font-size: 12px;
+        }
         font-size: 16px;
         max-width: 70%;
       }
