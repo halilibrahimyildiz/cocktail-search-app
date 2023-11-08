@@ -10,10 +10,12 @@ $font-size-large: 48px;
   text-align: center;
   width: 60%;
   max-width: 600px;
-  height: auto;
+
+  min-height: 600px;
   padding: 16px;
   border-radius: $border-radius;
-  margin-top: 50px;
+
+  margin: 50px;
   transition: 0.5s;
 
   @media (max-width: 512px) {
