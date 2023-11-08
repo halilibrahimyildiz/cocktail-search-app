@@ -6,6 +6,8 @@ This project is a React application that utilizes React-Redux and Redux Toolkit 
 
 To run the project locally, follow these steps:
 
+## Demo :https://cocktail-search-app-seven.vercel.app/search
+
 ### Prerequisites
 
 - Node.js must be installed. You can download it from [here](https://nodejs.org/).
